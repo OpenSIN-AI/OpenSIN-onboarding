@@ -17,9 +17,16 @@ User runs: opensin init
             │
             ▼
 ┌─────────────────────────────┐
+│  Phase 0: Bun Install ⚡   │
+│  ─ brew install oven-sh/bun/bun │
+│  ─ NEVER npm or npx!       │
+└──────────┬──────────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
 │  Phase 1: System Bootstrap  │
 │  ─ gcloud CLI install       │
-│  ─ Node.js/npm verify       │
+│  ─ Bun verify (NOT npm!)    │
 │  ─ Chrome verify             │
 │  ─ opencode CLI verify       │
 └──────────┬──────────────────┘

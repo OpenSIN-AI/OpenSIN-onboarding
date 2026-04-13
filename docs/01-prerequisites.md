@@ -7,11 +7,14 @@ Before running the OpenSIN onboarding, ensure you have:
 | Requirement | Minimum Version | Install |
 |------------|----------------|---------|
 | **macOS** | 12+ (Monterey) | — |
+| **Bun** | 1.3+ (ERSTER Schritt!) | `brew install oven-sh/bun/bun` |
 | **Node.js** | 18+ | `brew install node` |
 | **Python** | 3.11+ | `brew install python3` |
 | **Git** | 2.30+ | `brew install git` |
 | **Google Chrome** | 120+ | [Download](https://www.google.com/chrome/) |
 | **GitHub CLI** | 2.0+ | `brew install gh` |
+
+> ⚠️ **ACHTUNG:** Bun MUSS vor allen anderen Schritten installiert werden. `npm` und `npx` sind im OpenSIN-Ökosystem PERMANENT VERBOTEN (OOM-Killer crasht den Mac). Verwende AUSSCHLIESSLICH `bun install`, `bun run`, `bunx`.
 
 ## Required Accounts
 
