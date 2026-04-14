@@ -69,6 +69,15 @@ User runs: opensin init
            │
            ▼
 ┌─────────────────────────────┐
+│  Phase 5.5: Cloud Storage    │
+│  ─ Box.com account creation │
+│  ─ Create Public/Cache folders │
+│  ─ Enable sharing (public links)│
+│  ─ Optional: Developer Token │
+└──────────┬──────────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
 │  Phase 6: Verification      │
 │  ─ PM health check          │
 │  ─ gcloud secrets list      │
@@ -77,6 +86,53 @@ User runs: opensin init
 │  ─ Print onboarding report  │
 └─────────────────────────────┘
 ```
+
+## Cloud Storage Integration
+
+OpenSIN uses **Box.com** (10 GB free) as primary cloud storage, replacing GitLab Storage (account banned).
+
+### Storage Layout
+
+| Folder | Purpose | Sharing |
+|--------|---------|---------|
+| `/OpenSIN-Public` | Logos, images, docs (publicly accessible) | "People with link" → Can view |
+| `/OpenSIN-Cache` | Logs, cache, temporary files | "People with link" → Can view |
+
+### User Onboarding Flow
+
+During `opensin init`, users are guided through:
+
+1. **Create Box.com account** (free 10 GB)
+2. **Create folders** `/OpenSIN-Public` and `/OpenSIN-Cache`
+3. **Enable sharing** (public links must work, otherwise 404!)
+4. **Optional:** Create Box Developer Token for API access
+
+### Important Notes
+
+- **GitLab Storage is DEAD** — all previous GitLab-based log/cache uploads are migrated to Box.com
+- **Public links must be enabled** — without "People with the link" sharing, URLs return 404
+- **Developer Token** (optional) allows programmatic uploads via Box API
+- **Alternative:** Google Drive (15 GB free) can be used instead for user data
+
+### Configuration
+
+After onboarding, users should:
+
+1. Get folder IDs from Box.com (`box folders:children 0`)
+2. Add to `.env`:
+   ```bash
+   BOX_PUBLIC_FOLDER_ID=<id>
+   BOX_CACHE_FOLDER_ID=<id>
+   BOX_DEVELOPER_TOKEN=<token>
+   ```
+3. Share the public links with the OpenSIN team
+
+### Default Public Links (Example)
+
+- Public: https://app.box.com/s/1st624o9eb5xdistusew5w0erb8offc7
+- Cache: https://app.box.com/s/9s5htoefw1ux9ajaqj656v9a02h7z7x1
+
+**⚠️ These links only work if sharing is properly configured!**
 
 ## Quick Start
 

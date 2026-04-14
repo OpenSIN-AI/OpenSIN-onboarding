@@ -90,6 +90,14 @@ else
   save_state "phase5" "completed"
 fi
 
+if check_phase_done "phase5_storage"; then
+  log "Phase 5.5 already completed, skipping..."
+else
+  info "Phase 5.5: Cloud Storage Setup"
+  bash "$SCRIPT_DIR/phase5_storage_setup.sh"
+  save_state "phase5_storage" "completed"
+fi
+
 info "Phase 6: Verification"
 bash "$SCRIPT_DIR/phase6_verification.sh"
 save_state "phase6" "completed"
