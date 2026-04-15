@@ -1,5 +1,9 @@
 # OpenSIN Onboarding
 
+> [!IMPORTANT]
+> **SSOT:** Die kanonische OpenCode-Konfiguration liegt unter [Delqhi/upgraded-opencode-stack](https://github.com/Delqhi/upgraded-opencode-stack).
+> Nach jeder Änderung MUSS `sin-sync` ausgeführt werden.
+
 **Autonomous first-run setup for OpenSIN — zero manual intervention.**
 
 When a new user runs OpenSIN for the first time, this onboarding system automatically:
