@@ -1,3 +1,34 @@
+# OpenSIN-onboarding — MOVED
+
+> **This repository has been consolidated into [OpenSIN-AI/Infra-SIN-Dev-Setup](https://github.com/OpenSIN-AI/Infra-SIN-Dev-Setup) and is scheduled for archival.**
+
+## New location
+
+**https://github.com/OpenSIN-AI/Infra-SIN-Dev-Setup/tree/main/user-onboarding**
+
+All content is preserved exactly as it was here — same `scripts/`, `docs/`, `config/`, `.well-known/` layout.
+
+## Why
+
+This repo covered "end-user first-run setup for OpenSIN." `Infra-SIN-Dev-Setup` already covered "developer environment setup for working on OpenSIN." Two repos in the same domain made it unclear where new setup automation should go. Merged under `Infra-SIN-Dev-Setup` so there is a single "everything that gets OpenSIN running on your machine" destination.
+
+Full report: [OpenSIN-overview/docs/CONSOLIDATION-2026-04.md](https://github.com/OpenSIN-AI/OpenSIN-overview/blob/main/docs/CONSOLIDATION-2026-04.md)
+
+## What you should do
+
+- **Cloning for user onboarding?** `git clone OpenSIN-AI/Infra-SIN-Dev-Setup` and `cd user-onboarding/`.
+- **Had a PR here?** Reopen against `Infra-SIN-Dev-Setup` targeting `user-onboarding/`.
+- **Running `onboard.sh`?** Path is now `Infra-SIN-Dev-Setup/user-onboarding/scripts/onboard.sh`.
+
+## History preservation
+
+This repo stays on GitHub in **archived** (read-only) state. All commits remain searchable.
+
+---
+
+<details>
+<summary>Original README (preserved)</summary>
+
 # OpenSIN Onboarding
 
 > [!IMPORTANT]
@@ -227,3 +258,5 @@ Everything else is fully autonomous.
 ## License
 
 Apache 2.0 — see [LICENSE](LICENSE)
+
+</details>
